@@ -10,7 +10,7 @@ power.data <- read.table(file, header=TRUE,
 power.data$Date <- dmy(power.data$Date)
 power.data$Time <- hms(power.data$Time)
     
-# Reduce data frame to what we need
+# We select data to be used
 start <- ymd('2007-02-01')
 end <- ymd('2007-02-02')
 power.data <- subset(power.data, year(Date) == 2007 & 
